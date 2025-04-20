@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>SolidEat</title>
+  
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>SolidEat</h1>
+      <img src="{% static 'images/logo.jpg' %}" alt="Logo" class="logo">
+      <p>SolidEat permet aux personnes en précarité de réserver un repas délicieux via notre plateforme, et à d'autres de soutenir cette cause.</p>
+      <a href="#" class="btn">En savoir plus</a>
+    </div>
+
+    <hr>
+
+    <div class="image-text">
+      <img src="{% static 'images/donation.jpg' %}" alt="Don">
+      <div class="text">
+        <h2>Faire un don</h2>
+        <p>Vous pouvez contribuer et aider des personnes à accéder à des repas.</p>
+        <a href="#" class="btn">Je veux aider</a>
+      </div>
+    </div>
+
+    <div class="image-text">
+      <div class="text">
+        <h2>Réserver votre plat</h2>
+        <p>Réservez un plat chaud gratuitement si vous êtes en situation de précarité.</p>
+        <a href="#" class="btn">Réserver un plat</a>
+      </div>
+      <img src="{% static 'images/reserve.jpg' %}" alt="Réserver">
+    </div>
+
+    <hr>
+
+    <div class="faq-title">FAQ</div>
+
+    <div class="faq">
+      <div class="faq-list">
+        <div class="faq-item">
+          <p>Comment réserver un repas ?</p>
+          <div class="faq-answer">
+            <p>Pour réserver un repas, il suffit de s'inscrire sur notre plateforme, de choisir un plat et de réserver la date et l'heure.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <p>Qu'est-ce que SolidEat ?</p>
+          <div class="faq-answer">
+            <p>SolidEat est une plateforme qui aide les personnes en précarité à obtenir des repas gratuits grâce aux dons des utilisateurs.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <p>Puis-je réserver pour quelqu’un d’autre ?</p>
+          <div class="faq-answer">
+            <p>Oui, vous pouvez réserver un repas pour quelqu’un d'autre si vous le souhaitez.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fonction pour déplier ou replier les réponses FAQ
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        
+        // Alterne entre afficher et cacher la réponse
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
