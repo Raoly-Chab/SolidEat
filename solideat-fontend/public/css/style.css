@@ -1,0 +1,138 @@
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff512f, #f09819);
+      color: #000;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    
+    .logo {
+      width: 500px;
+      height: 200px;
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+    .btn {
+      background: #000;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .image-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    .image-text .text {
+      width: 45%;
+    }
+
+    .image-text img {
+      width: 45%;
+      border-radius: 10px;
+    }
+
+    .image-text .text h2 {
+      margin-bottom: 1rem;
+    }
+
+   
+    .faq {
+      padding: 1rem;
+      margin-top: 2rem;
+      background-color: white;
+      border-radius: 10px;
+      max-height: 600px; 
+      overflow: hidden;
+      transition: max-height 0.3s ease-out; 
+    }
+
+   
+    .faq-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .faq-item {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      width: 80%;
+      border-left: 2px solid #ccc;
+      padding-left: 1rem;
+      position: relative;
+      cursor: pointer; /* Curseur pour indiquer qu'on peut cliquer */
+    }
+
+    .faq-item::before {
+      content: "+";
+      font-size: 2rem;
+      position: absolute;
+      left: -25px;
+      top: 0;
+      color: #000;
+    }
+
+    .faq-item p {
+      margin-left: 10px;
+      font-size: 1.1rem;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #ccc;
+      margin: 4rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .image-text {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .image-text img {
+        width: 80%;
+        margin-bottom: 1rem;
+      }
+
+      .image-text .text {
+        width: 100%;
+      }
+    }
