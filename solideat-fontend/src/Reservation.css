@@ -1,0 +1,129 @@
+/* Style global du body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff512f, #f09819); /* Dégradé orange/rouge */
+  color: #333;
+}
+
+/* Conteneur principal pour la réservation */
+.trip-reservation {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre de la page de réservation */
+.trip-reservation h2 {
+  color: #ff512f;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Style du sous-titre */
+.subtitle {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Style des labels pour les champs du formulaire */
+.trip-form label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Style des champs de saisie et du sélecteur */
+.trip-form input,
+.trip-form select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9; /* Fond léger */
+}
+
+/* Style du bouton de soumission */
+button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #ff512f; /* Orange du dégradé */
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin: 2rem auto;
+}
+
+button:hover {
+  background-color: #f09819; /* Couleur plus claire au survol */
+}
+
+/* Style pour le calendrier (react-calendar) */
+.react-calendar {
+  width: 100%; /* Prend toute la largeur de l'écran */
+  max-width: 100%; /* Assure que le calendrier ne dépasse pas l'écran */
+  box-sizing: border-box; /* Pour que le padding ne dépasse pas la largeur */
+  border: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+/* Couleur des jours sélectionnés et actifs */
+.react-calendar__tile--active {
+  background: #ff512f;
+  color: white;
+}
+
+/* Jours complets (en rouge) */
+.react-calendar__tile.unavailable {
+  background: #ff6666; /* Rouge pour les jours complets */
+  color: white;
+}
+
+/* Jours disponibles (en vert) */
+.react-calendar__tile.available {
+  background: #66cc66; /* Vert pour les jours disponibles */
+  color: white;
+}
+
+/* Effet au survol des jours */
+.react-calendar__tile:hover {
+  background: #ddd;
+}
+
+/* Ajouter un peu de style au texte du calendrier */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+}
+
+.react-calendar__month-view__days__day {
+  font-size: 1rem;
+}
+
+/* Mise en forme mobile */
+@media (max-width: 768px) {
+  .trip-reservation {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+
+  .trip-form input,
+  .trip-form select {
+    font-size: 0.9rem; /* Petite taille de texte sur mobile */
+  }
+
+  .react-calendar {
+    width: 100%; /* Le calendrier prend toute la largeur sur mobile aussi */
+  }
+}
