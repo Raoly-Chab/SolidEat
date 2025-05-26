@@ -1,0 +1,569 @@
+/* Home.css */
+.home-container {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  /* Loading state */
+  .home-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 138, 61, 0.3);
+    border-radius: 50%;
+    border-top-color: #ff8a3d;
+    animation: spin 1s ease-in-out infinite;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Hero Section */
+  .home-hero {
+    height: 70vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/1920/1080?random=hero');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .hero-content {
+    max-width: 900px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #ff8a3d;
+  }
+  
+  .hero-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .btn-primary {
+    background-color: #ff8a3d;
+    color: white;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e67e35;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 138, 61, 0.2);
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: white;
+    color: #333;
+    transform: translateY(-2px);
+  }
+  
+  /* Map Section */
+  .map-section {
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .map-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .map-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .map-header p {
+    font-size: 1.1rem;
+    color: #777;
+    max-width: 700px;
+    margin: 0 auto 30px;
+  }
+  
+  .map-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .filter-btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    background-color: white;
+    border: 2px solid #ddd;
+    color: #555;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover {
+    border-color: #ff8a3d;
+    color: #ff8a3d;
+  }
+  
+  .filter-btn.active {
+    background-color: #ff8a3d;
+    border-color: #ff8a3d;
+    color: white;
+  }
+  
+  .map-container {
+    position: relative;
+    height: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .google-map {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .selected-restaurant-info {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    z-index: 10;
+  }
+  
+  .selected-restaurant-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .restaurant-address {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+  
+  .restaurant-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .restaurant-type {
+    background-color: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  .restaurant-rating {
+    font-weight: 600;
+    color: #ff8a3d;
+  }
+  
+  .restaurant-description {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .restaurant-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-view-menu, .btn-donate {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-view-menu {
+    background-color: #ff8a3d;
+    color: white;
+    border: none;
+  }
+  
+  .btn-donate {
+    background-color: white;
+    color: #ff8a3d;
+    border: 1px solid #ff8a3d;
+  }
+  
+  .close-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+  }
+  
+  .map-legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .legend-marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
+  .legend-marker.establishment {
+    background-color: #3498db;
+  }
+  
+  .legend-marker.solidarity {
+    background-color: #e74c3c;
+  }
+  
+  /* Featured Restaurants Section */
+  .featured-restaurants {
+    padding: 80px 20px;
+  }
+  
+  .featured-restaurants h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+  }
+  
+  .featured-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .featured-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .featured-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .featured-content {
+    padding: 20px;
+  }
+  
+  .featured-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .featured-address {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  
+  .featured-type {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+  
+  .featured-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .star {
+    color: #ff8a3d;
+  }
+  
+  .btn-featured {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #ff8a3d;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-featured:hover {
+    background-color: #e67e35;
+  }
+  
+  .view-all-container {
+    text-align: center;
+  }
+  
+  .btn-view-all {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: transparent;
+    border: 2px solid #ff8a3d;
+    color: #ff8a3d;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-view-all:hover {
+    background-color: #ff8a3d;
+    color: white;
+  }
+  
+  /* Info Section */
+  .info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .info-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .info-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .info-card p {
+    color: #777;
+    line-height: 1.5;
+  }
+  
+/* Call to Action Section */
+.cta-section {
+    padding: 100px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/1920/1080?random=cta');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .cta-section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #eee;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Map Info Window Styles */
+  .map-info-window {
+    padding: 10px;
+    min-width: 200px;
+  }
+  
+  .map-info-window h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .map-info-window p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .info-window-rating {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #ff8a3d;
+  }
+  
+  .info-window-actions {
+    margin-top: 10px;
+  }
+  
+  .info-window-actions a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ff8a3d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-content h2 {
+      font-size: 1.8rem;
+    }
+    
+    .hero-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .map-container {
+      height: 400px;
+    }
+    
+    .selected-restaurant-info {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 90%;
+      box-sizing: border-box;
+    }
+    
+    .info-section {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-content h2 {
+      font-size: 1.5rem;
+    }
+    
+    .map-filters {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .featured-grid {
+      grid-template-columns: 1fr;
+    }
+  }
